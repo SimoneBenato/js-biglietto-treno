@@ -12,19 +12,19 @@
 
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
-var km = prompt("Quanti kilometri necessita percorrere?");
+var km = parseInt(prompt("Quanti kilometri necessita percorrere?"));
 
-var age = prompt("Quanti anni ha?");
+var age = parseInt(prompt("Quanti anni ha?"));
 
-var price
+var price;
 
 if (age < 18) {
 
-    price = ((km * 0.21) * 0.8)
+    price = ((km * 0.21) * 0.8);
 
 } else if (age > 64) {
 
-    price = ((km * 0.21) * 0.6)
+    price = ((km * 0.21) * 0.6);
 
 } else {
 
@@ -32,4 +32,4 @@ if (age < 18) {
 
 }
 
-document.getElementById("price").innerHTML = price
+document.getElementById("price").innerHTML = price.toFixed(2);
